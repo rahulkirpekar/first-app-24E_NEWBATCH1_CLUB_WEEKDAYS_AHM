@@ -1,0 +1,63 @@
+
+	
+	WebTechnology(Servlet-Jsp)
+	    |
+      WebApplication
+
+
+
+
+Servlet:-
+---------
+
+
+	Servlet is Java Class(request,response)
+	----------------------
+		|
+	       run
+	        |
+	     webserver		
+		
+
+
+
+
+public class TestApp
+{
+	public static void main(String args[])
+	{
+		
+	}
+}
+----------------------------------------------------------
+  tomcat	     Servlet(I)	
+    |			|
+   lib		     GenericServlet(AC)	
+    |			|
+servlet-api.jar----->HttpServlet(AC)
+			|
+		    FirstServlet(Servlet class)	
+
+public class FirstServlet extends HttpServlet
+{
+	protected void service(HttpServletRequest request,HttpServletResponse response)
+	{
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

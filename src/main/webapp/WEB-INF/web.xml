@@ -11,4 +11,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
+
+	<servlet>
+		<servlet-name>abc</servlet-name>  	
+	 	<servlet-class>com.royal.controller.FirstServlet</servlet-class>
+	 </servlet>
+	<servlet-mapping>
+		<servlet-name>abc</servlet-name>  	
+		<url-pattern>/xyz</url-pattern>	
+	</servlet-mapping>  
+  
+  
+  <servlet>
+		<servlet-name>SecondServlet</servlet-name>  	
+	 	<servlet-class>com.royal.controller.SecondServlet</servlet-class>
+	 </servlet>
+	<servlet-mapping>
+		<servlet-name>SecondServlet</servlet-name>  	
+		<url-pattern>/SecondServlet</url-pattern>	
+	</servlet-mapping> 	
+  
 </web-app>
