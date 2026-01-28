@@ -1,0 +1,30 @@
+Servlet Collaboration:-
+-----------------------
+
+	FirstServlet------------->SecondServlet
+
+	Jsp----------->Jsp
+
+	Servlet--------->Jsp
+
+	Jsp---------->Servlet
+-----------------------------------------------------
+
+1. request:-
+-------------
+
+	RequestDispacher rd = request.getRequestDispacher("urlPattern/test1.jsp");
+	rd.forward(request,response);
+	// rd.include(request,response);
+
+2. response:-
+-------------
+
+	response.sendRedirect("www.google.com");
+
+
+
+
+
+
+

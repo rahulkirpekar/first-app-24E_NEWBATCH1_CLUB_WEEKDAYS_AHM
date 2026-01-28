@@ -21,8 +21,7 @@
 		<url-pattern>/xyz</url-pattern>	
 	</servlet-mapping>  
   
-  
-  <servlet>
+ 	<servlet>
 		<servlet-name>SecondServlet</servlet-name>  	
 	 	<servlet-class>com.royal.controller.SecondServlet</servlet-class>
 	 </servlet>
@@ -30,5 +29,44 @@
 		<servlet-name>SecondServlet</servlet-name>  	
 		<url-pattern>/SecondServlet</url-pattern>	
 	</servlet-mapping> 	
+	
+	<servlet>
+		<servlet-name>ThirdServlet</servlet-name>
+		<servlet-class>com.royal.controller.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ThirdServlet</servlet-name>
+		<url-pattern>/thirdServlet</url-pattern>
+	</servlet-mapping>
+  
+  
+    <servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.royal.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/loginServlet</url-pattern>
+	</servlet-mapping>
+  
+  
+      <servlet>
+		<servlet-name>FourthServlet</servlet-name>
+		<servlet-class>com.royal.controller.FourthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FourthServlet</servlet-name>
+		<url-pattern>/FourthServlet</url-pattern>
+	</servlet-mapping>
+	
+	      <servlet>
+		<servlet-name>FifthServlet</servlet-name>
+		<servlet-class>com.royal.controller.FifthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FifthServlet</servlet-name>
+		<url-pattern>/FifthServlet</url-pattern>
+	</servlet-mapping>
+  
   
 </web-app>
