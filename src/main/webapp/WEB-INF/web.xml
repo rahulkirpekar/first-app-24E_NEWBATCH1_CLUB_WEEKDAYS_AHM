@@ -11,6 +11,29 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
+  
+	<context-param>
+		<param-name>lang1</param-name>
+		<param-value>C Language</param-value>
+	</context-param>
+  
+	<context-param>
+		<param-name>lang2</param-name>
+		<param-value>C++ Language</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>lang3</param-name>
+		<param-value>Core Java</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>lang4</param-name>
+		<param-value>Python</param-value>
+	</context-param>
+  
+  
+  
 
 	<servlet>
 		<servlet-name>abc</servlet-name>  	
@@ -59,7 +82,7 @@
 		<url-pattern>/FourthServlet</url-pattern>
 	</servlet-mapping>
 	
-	      <servlet>
+     <servlet>
 		<servlet-name>FifthServlet</servlet-name>
 		<servlet-class>com.royal.controller.FifthServlet</servlet-class>
 	</servlet>
@@ -68,5 +91,119 @@
 		<url-pattern>/FifthServlet</url-pattern>
 	</servlet-mapping>
   
-  
+
+	 <servlet>
+		<servlet-name>SixthServlet</servlet-name>
+		<servlet-class>com.royal.controller.SixthServlet</servlet-class>
+		
+		<init-param>
+			<param-name>URLNAME</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>		
+		<init-param>
+			<param-name>DRIVERCLASS</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>		
+			<init-param>
+			<param-name>USERNAME</param-name>
+			<param-value>root</param-value>
+		</init-param>		
+		<init-param>
+			<param-name>PASSWORD</param-name>
+			<param-value>root</param-value>
+		</init-param>		
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SixthServlet</servlet-name>
+		<url-pattern>/SixthServlet</url-pattern>
+	</servlet-mapping>
+	
+	  <servlet>
+		<servlet-name>SevenServlet</servlet-name>
+		<servlet-class>com.royal.controller.SevenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SevenServlet</servlet-name>
+		<url-pattern>/SevenServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	 <servlet>
+		<servlet-name>EightServlet</servlet-name>
+		<servlet-class>com.royal.controller.EightServlet</servlet-class>
+		
+		<init-param>
+			<param-name>URLNAME</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>		
+		<init-param>
+			<param-name>DRIVERCLASS</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>		
+			<init-param>
+			<param-name>USERNAME</param-name>
+			<param-value>root</param-value>
+		</init-param>		
+		<init-param>
+			<param-name>PASSWORD</param-name>
+			<param-value>root</param-value>
+		</init-param>		
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EightServlet</servlet-name>
+		<url-pattern>/EightServlet</url-pattern>
+	</servlet-mapping>
+	  
+	  
+	  
+	  <servlet>
+		<servlet-name>NinthServlet</servlet-name>
+		<servlet-class>com.royal.controller.NinthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NinthServlet</servlet-name>
+		<url-pattern>/NinthServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>TenthServlet</servlet-name>
+		<servlet-class>com.royal.controller.TenthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TenthServlet</servlet-name>
+		<url-pattern>/TenthServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EleventhServlet</servlet-name>
+		<servlet-class>com.royal.controller.EleventhServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EleventhServlet</servlet-name>
+		<url-pattern>/EleventhServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TwelveServlet</servlet-name>
+		<servlet-class>com.royal.controller.TwelveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwelveServlet</servlet-name>
+		<url-pattern>/TwelveServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ThirteenServlet</servlet-name>
+		<servlet-class>com.royal.controller.ThirteenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ThirteenServlet</servlet-name>
+		<url-pattern>/ThirteenServlet</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>
