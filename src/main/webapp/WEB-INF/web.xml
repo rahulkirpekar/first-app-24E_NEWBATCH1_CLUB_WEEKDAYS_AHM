@@ -206,4 +206,42 @@
 	</servlet-mapping>
 	
 	
+	
+	<servlet>
+		<servlet-name>FourteenServlet</servlet-name>
+		<servlet-class>com.royal.controller.FourteenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FourteenServlet</servlet-name>
+		<url-pattern>/FourteenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FifteenServlet</servlet-name>
+		<servlet-class>com.royal.controller.FifteenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FifteenServlet</servlet-name>
+		<url-pattern>/FifteenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SixteenServlet</servlet-name>
+		<servlet-class>com.royal.controller.SixteenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SixteenServlet</servlet-name>
+		<url-pattern>/SixteenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.royal.controller.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>

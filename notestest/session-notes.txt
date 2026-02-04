@@ -1,0 +1,31 @@
+Data Sharing Scope:-
+----------------------
+session:-
+---------
+				Duration
+	login<--------------------------------------------------->logout
+	  |
+	[session create]
+
+
+	1. HttpSession session = request.getSession();
+
+	2. HttpSession session = request.getSession(true);
+
+	3. HttpSession session = request.getSession(false);
+
+
+session data Store :-
+--------------------
+
+	1. session.setAttribute(String key,Object value);
+	2. Object value = session.getAttribute(String key);
+	3. session.removeAttribute(String key);// data -->delete---Object value
+
+
+
+
+Session Delete:-
+------------------
+
+	session.invalidate(); // session delete
