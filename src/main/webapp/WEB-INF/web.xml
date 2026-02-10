@@ -244,4 +244,22 @@
 	</servlet-mapping>
 	
 	
+		<servlet>
+		<servlet-name>SeventeenServlet</servlet-name>
+		<servlet-class>com.royal.controller.SeventeenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SeventeenServlet</servlet-name>
+		<url-pattern>/SeventeenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EighteenServlet</servlet-name>
+		<servlet-class>com.royal.controller.EighteenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EighteenServlet</servlet-name>
+		<url-pattern>/EighteenServlet</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

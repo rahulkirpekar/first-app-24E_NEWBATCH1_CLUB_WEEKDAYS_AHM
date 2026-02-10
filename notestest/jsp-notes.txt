@@ -1,0 +1,85 @@
+Scripting Elements:-
+------------------------
+
+
+1. Scriptlet Tag :-
+------------------
+	[Jsp-----Servlet----
+			service()
+			{
+				....Java Code....
+			}
+	]
+
+		<%
+
+			int no1,no2,ans;
+			no1=100;
+			no2=200;
+
+			ans = no1+no2;
+
+			out.print("Addition : " + ans) 
+
+		%>
+
+
+
+2. Expression Tag:-
+--------------------------
+[Jsp-----Servlet----
+			service()
+			{
+				out.print(1000-200);
+			}
+	]
+
+	<%=1000-200%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.
+	
+
+	Servlet - 90% Java Code + 10% HTML Tag
+
+	Jsp = 10% Java Code + 90% Html Tags
+---------------------------------------------------------------------
+
+JSP = [Java Code + HtmlCode]
+
+demo.jsp--->servlet
+
+	HttpJspBase
+	  |
+	demo_jsp.java
+
+		1._JspInit
+		2._JspService
+		3._JspDestroy
+
+
+	1. Translate(demo.jsp---translate into Servlet(Java File))
+		demo.jsp-->demo_jsp.java
+
+	2. Compile(Servlet(Java File)---Compile--[class File])
+		demo_jsp.java--->demo_jsp.classs
+
+	3. Run(run Compile--[class File])
+	demo_jsp.classs
+
+	4. output
