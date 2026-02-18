@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
   <display-name>first-app-24E_NEWBATCH1_CLUB_WEEKDAYS_AHM</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>stureg.jsp</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.xhtml</welcome-file>
@@ -260,6 +260,15 @@
 	<servlet-mapping>
 		<servlet-name>EighteenServlet</servlet-name>
 		<url-pattern>/EighteenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertStudentServlet</servlet-name>
+		<servlet-class>com.royal.controller.InsertStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertStudentServlet</servlet-name>
+		<url-pattern>/insertStudentServlet</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

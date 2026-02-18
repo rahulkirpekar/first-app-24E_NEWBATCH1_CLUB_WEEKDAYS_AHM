@@ -83,3 +83,74 @@ demo.jsp--->servlet
 	demo_jsp.classs
 
 	4. output
+	
+	jsp---Java Server Page
+----------------------------
+
+Java Code - Scripting Elements
+--------------
+
+Scripting Elements:-
+----------------
+
+1. Scriptlet Tag
+--------------------
+	<%
+		Java Code
+	%>
+
+
+2. Expression Tag:-
+-------------------
+
+	<%=Java Code%>
+
+
+
+Session Tracking:-
+-------------------
+
+	1. HttpSession
+	2. Cookie
+		
+		name,value
+
+	
+
+
+	3. Query String
+	4. Hiddent Form Field
+	
+3. Declaration Tag:-
+-----------------------
+	<%!
+		int getCube(int no)
+		{
+			return(no*no*no);	
+		}
+	%>
+int getCube(int no)
+{
+			return(no*no*no);	
+}
+void service()
+{
+	getCube(no);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
