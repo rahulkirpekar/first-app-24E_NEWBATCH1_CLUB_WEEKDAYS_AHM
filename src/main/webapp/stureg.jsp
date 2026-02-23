@@ -131,14 +131,14 @@ function confirmLogout() {
 	
 	<form action="insertStudentServlet" method="post">
 	
-	    <label for="fullname">Full Name</label>
-	    <input type="text" id="fullname" name="fullname" required>
+	    <label for="fullname">Full Name ${fullnameErr}</label>
+	    <input type="text" id="fullname" name="fullname" value="${sbean.fullname}">
 	
-	    <label for="age">Age</label>
-	    <input type="number" id="age" name="age" required>
+	    <label for="age">Age ${ageErr}</label>
+	    <input type="number" id="age" name="age" value="${sbean.age}">
 	
-	    <label for="course">Select Course</label>
-	    <select id="course" name="course" required>
+	    <label for="course">Select Course ${courseErr}</label>
+	    <select id="course" name="course">
 	        <option value="">-- Select Course --</option>
 	        <option>C Programming</option>
 	        <option>C++</option>
@@ -147,14 +147,14 @@ function confirmLogout() {
 	        <option>Python</option>
 	    </select>
 	
-	    <label>Gender</label>
+	    <label>Gender ${genderErr}</label>
 	    <div class="inline-options">
-	        <input type="radio" name="gender" value="Male" required> Male
+	        <input type="radio" name="gender" value="Male"> Male
 	        <input type="radio" name="gender" value="Female"> Female
 	        <input type="radio" name="gender" value="Other"> Other
 	    </div>
 	
-	    <label>Hobbies</label>
+	    <label>Hobbies ${hobbyErr}</label>
 	    <div class="inline-options">
 	        <input type="checkbox" name="hobby" value="Reading"> Reading
 	        <input type="checkbox" name="hobby" value="Music"> Music
@@ -162,17 +162,17 @@ function confirmLogout() {
 	        <input type="checkbox" name="hobby" value="Coding"> Coding
 	    </div>
 	
-	    <label for="dob">Date of Birth</label>
-	    <input type="date" id="dob" name="dob">
+	    <label for="dob">Date of Birth ${dobErr}</label>
+	    <input type="date" id="dob" name="dob" value="${sbean.dob}">
 	
-	    <label for="email">Email</label>
-	    <input type="email" id="email" name="email">
+	    <label for="email">Email ${emailErr}</label>
+	    <input type="email" id="email" name="email" value="${sbean.email}">
 	
-	    <label for="mobile">Mobile</label>
-	    <input type="tel" id="mobile" name="mobile">
+	    <label for="mobile">Mobile ${mobileErr}</label>
+	    <input type="tel" id="mobile" name="mobile" value="${sbean.mobile}">
 	
-	    <label for="address">Address</label>
-	    <textarea id="address" name="address" rows="3"></textarea>
+	    <label for="address">Address ${addressErr}</label>
+	    <textarea id="address" name="address" rows="3">${sbean.address}</textarea>
 	
 	    <div class="btn-container">
 	        <input type="submit" value="Register">

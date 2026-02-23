@@ -144,6 +144,8 @@ public class InsertStudentServlet extends HttpServlet
 			flag = true;
 		}
 		
+		request.setAttribute("sbean", sbean);
+		
 		RequestDispatcher rd = null;
 		
 		if(flag) 
@@ -167,3 +169,15 @@ public class InsertStudentServlet extends HttpServlet
 		rd.forward(request, response);
 	}
 }
+
+// Hobbies Logic 
+//for (int i = 0; i < hobbies.length; i++) 
+//{
+//	if(i < hobbies.length-1) 
+//	{
+//		out.print(hobbies[i]+",");
+//	}else 
+//	{
+//		out.print(hobbies[i]+".");
+//	}
+//}
