@@ -2,9 +2,9 @@ package com.royal.bean;
 
 public class StudentBean 
 {
-	private int id	         ;
+	private Integer id	         ;
 	private String fullname  ;
-	private int age          ;
+	private Integer age          ;
 	private String course    ;
 	private String gender    ;
 	private String hobby[]     ;
@@ -17,8 +17,8 @@ public class StudentBean
 	{
 	}
 
-	public StudentBean(int id, String fullname, int age, String course, String gender, String[] hobby, String dob,
-			String email, String mobile, String address) {
+	public StudentBean(Integer id, String fullname, Integer age, String course, String gender, String[] hobby,
+			String dob, String email, String mobile, String address) {
 		this.id = id;
 		this.fullname = fullname;
 		this.age = age;
@@ -30,9 +30,8 @@ public class StudentBean
 		this.mobile = mobile;
 		this.address = address;
 	}
-	public StudentBean(String fullname, int age, String course, String gender, String[] hobby, String dob,
-			String email, String mobile, String address) 
-	{
+	public StudentBean(String fullname, Integer age, String course, String gender, String[] hobby,
+			String dob, String email, String mobile, String address) {
 		this.fullname = fullname;
 		this.age = age;
 		this.course = course;
@@ -44,11 +43,11 @@ public class StudentBean
 		this.address = address;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -60,11 +59,11 @@ public class StudentBean
 		this.fullname = fullname;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -123,6 +122,25 @@ public class StudentBean
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
+
+	public boolean isHobbySelected(String hobby) 
+	{
+		if(this.hobby==null) 
+		{
+			return false;
+		}
+		
+		for (int i = 0; i < this.hobby.length; i++) 
+		{
+			if(this.hobby[i].equals(hobby)) 
+			{
+				return true;
+			}			
+		}
+		return false;
+	}
 }
+
+
+
+

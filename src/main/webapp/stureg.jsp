@@ -140,26 +140,26 @@ function confirmLogout() {
 	    <label for="course">Select Course ${courseErr}</label>
 	    <select id="course" name="course">
 	        <option value="">-- Select Course --</option>
-	        <option>C Programming</option>
-	        <option>C++</option>
-	        <option>Core Java</option>
-	        <option>Advanced Java</option>
-	        <option>Python</option>
+	        <option value="C Programming"  ${sbean.course  == 'C Programming'  ? 'selected' : ''} >C Programming</option>
+	        <option value="C++"            ${sbean.course  == 'C++'            ? 'selected' : ''}           >C++</option>
+	        <option value="Core Java"       ${sbean.course == 'Core Java'      ? 'selected' : ''}      >Core Java</option>
+	        <option value="Advanced Java"   ${sbean.course == 'Advanced Java'  ? 'selected' : ''}  >Advanced Java</option>
+	        <option value="Python"          ${sbean.course == 'Python'         ? 'selected' : ''}>Python</option>
 	    </select>
 	
 	    <label>Gender ${genderErr}</label>
 	    <div class="inline-options">
-	        <input type="radio" name="gender" value="Male"> Male
-	        <input type="radio" name="gender" value="Female"> Female
-	        <input type="radio" name="gender" value="Other"> Other
+	        <input type="radio" name="gender" value="Male"	 ${sbean.gender=='Male'   ? 'checked' : ''}> Male
+	        <input type="radio" name="gender" value="Female"  ${sbean.gender=='Female' ? 'checked' : ''}> Female
+	        <input type="radio" name="gender" value="Other"	 ${sbean.gender=='Other'  ? 'checked' : ''}> Other
 	    </div>
 	
 	    <label>Hobbies ${hobbyErr}</label>
 	    <div class="inline-options">
-	        <input type="checkbox" name="hobby" value="Reading"> Reading
-	        <input type="checkbox" name="hobby" value="Music"> Music
-	        <input type="checkbox" name="hobby" value="Sports"> Sports
-	        <input type="checkbox" name="hobby" value="Coding"> Coding
+	        <input type="checkbox" name="hobby" value="Reading"	${sbean.isHobbySelected('Reading') ? 'checked' : ''}	> Reading
+	        <input type="checkbox" name="hobby" value="Music"		${sbean.isHobbySelected('Music')   ? 'checked' : ''}	> Music
+	        <input type="checkbox" name="hobby" value="Sports"	${sbean.isHobbySelected('Sports')  ? 'checked' : ''} > Sports
+	        <input type="checkbox" name="hobby" value="Coding"	${sbean.isHobbySelected('Coding')  ? 'checked' : ''}	> Coding
 	    </div>
 	
 	    <label for="dob">Date of Birth ${dobErr}</label>
