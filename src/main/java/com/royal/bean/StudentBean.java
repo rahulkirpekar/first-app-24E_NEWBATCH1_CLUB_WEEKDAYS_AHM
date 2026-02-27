@@ -122,6 +122,24 @@ public class StudentBean
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public String getHobbiesStr() 
+	{
+		String hobbiesStr = "";
+		for (int i = 0; i < hobby.length; i++) 
+		{
+			if(i < hobby.length-1) 
+			{
+				hobbiesStr = hobbiesStr+ hobby[i]+",";
+			}else 
+			{
+				hobbiesStr = hobbiesStr+ hobby[i];
+			}
+		}
+		return hobbiesStr;
+	}
+	
+	
 
 	public boolean isHobbySelected(String hobby) 
 	{
