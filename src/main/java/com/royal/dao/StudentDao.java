@@ -99,12 +99,92 @@ public class StudentDao
 		}
 		return list;
 	}
-	
-//	public static void main(String[] args) 
-//	{
-//		System.out.println("new StudentDao().getAllStudentRecords().size() : "+new StudentDao().getAllStudentRecords().size());
-//		
-//	}
-	
-	
+
+	public int deleteStudent(int id) 
+	{
+		String deleteQuery = "DELETE FROM Student WHERE id=?";
+		
+		Connection conn = DBConnection.getConnection();
+		PreparedStatement pstmt =null;
+		int rowsAffected = 0;
+		if (conn != null) 
+		{
+			try 
+			{
+				pstmt =conn.prepareStatement(deleteQuery);
+			
+				pstmt.setInt(1, id);
+				
+				rowsAffected = pstmt.executeUpdate();
+			
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		} else 
+		{
+			System.out.println("StudentDao--deleteStudent()---Db not connected");
+		}
+		return rowsAffected;
+	}
+
+	public StudentBean getStudentById(int id) 
+	{
+		String selectByIdQuery = "SELECT * FROM student WHERE id = ?";
+		Connection conn = DBConnection.getConnection();
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		StudentBean sbean = null;
+		if (conn!=null) 
+		{
+			try 
+			{
+				pstmt = conn.prepareStatement(selectByIdQuery);
+
+				pstmt.setInt(1, id);
+				
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) 
+				{
+					
+					int id1 = rs.getInt("id");
+					String name = rs.getString("fullname");
+					int age = rs.getInt("age");
+					String course = rs.getString("course");
+					String gender = rs.getString("gender");
+					String hobbiesStr = rs.getString("hobbies");
+						
+					String hobbies[] = hobbiesStr.split(",");
+
+					String dob = rs.getString("dob");
+					
+					String email = rs.getString("email");
+					String mobile = rs.getString("mobile");
+					String address = rs.getString("address");
+					
+					sbean = new StudentBean(id1, name, age, course, gender, hobbies, dob, email, mobile, address);
+				}
+				
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		} else 
+		{
+			System.out.println("StudentDao---getStudentById() Db not connetced");
+		} 
+		return sbean;
+	}
 }
+
+
+
+
+
+
+
+
+
+

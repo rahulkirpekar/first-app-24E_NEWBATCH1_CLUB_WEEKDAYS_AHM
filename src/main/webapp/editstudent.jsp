@@ -129,7 +129,7 @@ function confirmLogout() {
 
 	<h2>Student Registration</h2>
 	
-	<form action="insertStudentServlet" method="post">
+	<form action="UpdateStudentServlet" method="post">
 	
 	    <label for="fullname">Full Name ${fullnameErr}</label>
 	    <input type="text" id="fullname" name="fullname" value="${sbean.fullname}">
@@ -138,7 +138,7 @@ function confirmLogout() {
 	    <input type="number" id="age" name="age" value="${sbean.age}">
 	
 	    <label for="course">Select Course ${courseErr}</label>
-	    <select id="course" name="course">
+	   <select id="course" name="course">
 	        <option value="">-- Select Course --</option>
 	        <option value="C Programming"  ${sbean.course  == 'C Programming'  ? 'selected' : ''} >C Programming</option>
 	        <option value="C++"            ${sbean.course  == 'C++'            ? 'selected' : ''}           >C++</option>
@@ -178,7 +178,7 @@ function confirmLogout() {
 	    <textarea id="address" name="address" rows="3">${sbean.address}</textarea>
 	
 	    <div class="btn-container">
-	        <input type="submit" value="Register">
+	        <input type="submit" value="Update">
 	        <input type="reset" value="Clear">
 	    </div>
 	</form>
