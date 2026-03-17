@@ -131,6 +131,8 @@ function confirmLogout() {
 	
 	<form action="UpdateStudentServlet" method="post">
 	
+		${dbErr}
+	
 	    <label for="id">Employee Id</label>
 	    <input type="text" id="id" name="id" value="${sbean.id}" readonly="readonly">
 	
