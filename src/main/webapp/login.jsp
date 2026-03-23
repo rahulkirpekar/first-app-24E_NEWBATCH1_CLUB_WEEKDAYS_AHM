@@ -98,8 +98,10 @@
 <div class="login-container">
     <h2>User Login</h2>
 
-    <form action="loginServlet">
-
+    <form action="loginServlet" method="post">
+		
+		${loginErr}
+		
         <div class="form-group">
             <label>User Name</label>
             <input type="text" name="userName" placeholder="Enter username" required>

@@ -116,7 +116,7 @@ function confirmLogout() {
 <!-- ===== HEADER ===== -->
 
 <div class="header">
-    <span>Welcome, User</span>
+    <span>Welcome, ${sessionScope.userBean.userName}</span>
 
     <form action="LogoutServlet" method="post" onsubmit="return confirmLogout();">
         <input type="submit" value="Logout" class="logout-btn">
