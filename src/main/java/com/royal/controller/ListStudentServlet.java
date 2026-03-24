@@ -10,13 +10,22 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class ListStudentServlet extends HttpServlet
 {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-	{
+	{		
 		System.out.println("ListStudentServlet----service()");
+	
+		HttpSession session = request.getSession(false);
+		
+		if(session == null)
+		{
+			request.setAttribute("invalidAccess", "<font color='red'>Invalid Access,Login First...!</font>");
+			request.getRequestDispatcher("login.jsp").forward(request,response);
+		}
 		
 		StudentDao studentDao = new StudentDao();
 		

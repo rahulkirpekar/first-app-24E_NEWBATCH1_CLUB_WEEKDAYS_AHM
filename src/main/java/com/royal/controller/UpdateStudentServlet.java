@@ -6,9 +6,12 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 import com.royal.bean.StudentBean;
+import com.royal.bean.UserBean;
 import com.royal.dao.StudentDao;
 import com.royal.util.StringUtils;
 
@@ -19,6 +22,15 @@ public class UpdateStudentServlet extends HttpServlet
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		HttpSession session = request.getSession(false);
+		
+		UserBean userBean = (UserBean)session.getAttribute("userBean");
+		if(userBean == null)
+		{
+			request.setAttribute("invalidAccess", "<font color='red'>Invalid Access,Login First...!</font>");
+			request.getRequestDispatcher("login.jsp").forward(request,response);
+		}
+		
 		int id = Integer.parseInt(request.getParameter("id"));
 		
 		System.out.println("UpdateStudentServlet --Id : " + id);

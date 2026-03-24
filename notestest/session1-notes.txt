@@ -1,0 +1,22 @@
+Session Tracking:-
+------------------
+
+Session --- Duration
+---------
+			session
+	login<----------------------------->logout
+
+	login:-
+	--------
+		UserName
+		password
+		
+		session create
+		--------------
+			1. HttpSession session = request.getSession();
+			2. HttpSession session = request.getSession(true);
+			3. HttpSession session = request.getSession(false);	
+
+		logout:-
+		-------
+			session.invalidate();// session---destroy/delete	

@@ -2,8 +2,9 @@ package com.royal.controller;
 
 import java.io.IOException;
 
-import com.royal.bean.StudentBean;
+import com.royal.bean.UserBean;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,7 +18,26 @@ public class LogoutServlet extends HttpServlet
 	{
 		HttpSession session = request.getSession(false);
 		
-		session.invalidate();
-		System.out.println("LogoutServlet : session deleted");
+		RequestDispatcher rd = null;
+		if (session != null) 
+		{
+			UserBean userBean =	(UserBean)session.getAttribute("userBean");
+			
+			if(userBean !=null) 
+			{
+				session.invalidate();
+				request.setAttribute("logoutAccess", "<font color='green'>Logout Successfully.</font>");
+				rd = request.getRequestDispatcher("login.jsp");
+			}else 
+			{
+				request.setAttribute("invalidAccess", "<font color='red'>Invalid Access,Login First...!</font>");
+				rd = request.getRequestDispatcher("login.jsp");
+			}
+		} else 
+		{
+			request.setAttribute("invalidAccess", "<font color='red'>Invalid Access,Login First...!</font>");
+			rd = request.getRequestDispatcher("login.jsp");
+		}
+		rd.forward(request, response);
 	}
 }

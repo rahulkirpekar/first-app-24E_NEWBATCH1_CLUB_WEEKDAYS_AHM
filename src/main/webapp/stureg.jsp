@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="com.royal.bean.UserBean"%>
 <html lang="en">
 
 <head>
@@ -112,6 +113,18 @@ function confirmLogout() {
 </head>
 
 <body>
+
+	<%
+		UserBean userBean = (UserBean)session.getAttribute("userBean");
+	
+		if(userBean == null)
+		{
+			request.setAttribute("invalidAccess", "<font color='red'>Invalid Access,Login First...!</font>");
+			request.getRequestDispatcher("login.jsp").forward(request,response);
+		}
+	%>
+
+
 
 <!-- ===== HEADER ===== -->
 

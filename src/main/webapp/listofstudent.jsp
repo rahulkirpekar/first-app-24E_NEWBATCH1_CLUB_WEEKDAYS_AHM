@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="com.royal.bean.UserBean"%>
 <%@page import="com.royal.bean.StudentBean"%>
 <%@page import="java.util.ArrayList"%>
 
@@ -185,6 +186,15 @@ tr:hover {
 </head>
 
 <body>
+	<%
+		UserBean userBean = (UserBean)session.getAttribute("userBean");
+	
+		if(userBean == null)
+		{
+			request.setAttribute("invalidAccess", "<font color='red'>Invalid Access,Login First...!</font>");
+			request.getRequestDispatcher("login.jsp").forward(request,response);
+		}
+	%>
 
 	<div class="header">Student Management System</div>
 

@@ -101,6 +101,8 @@
     <form action="loginServlet" method="post">
 		
 		${loginErr}
+		${logoutAccess}
+		${invalidAccess}
 		
         <div class="form-group">
             <label>User Name</label>
