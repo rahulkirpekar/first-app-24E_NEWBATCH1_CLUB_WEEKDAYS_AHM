@@ -312,5 +312,43 @@
 		<url-pattern>/UpdateStudentServlet</url-pattern>
 	</servlet-mapping>
 		
+		
+	<servlet>
+		<servlet-name>TwentyServlet</servlet-name>
+		<servlet-class>com.royal.controller.TwentyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwentyServlet</servlet-name>
+		<url-pattern>/TwentyServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NineteenServlet</servlet-name>
+		<servlet-class>com.royal.controller.NineteenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NineteenServlet</servlet-name>
+		<url-pattern>/NineteenServlet</url-pattern>
+	</servlet-mapping>
+		
+	<listener>
+		<display-name>TestServletRequestListener</display-name>
+		<listener-class>com.royal.listener.TestServletRequestListener</listener-class>
+	</listener>
+	
+	<listener>
+		<display-name>TestServletRequestAttributeListener</display-name>
+		<listener-class>com.royal.listener.TestServletRequestAttributeListener</listener-class>
+	</listener>
+	
+	<listener>
+		<display-name>TestHttpSessionListener</display-name>
+		<listener-class>com.royal.listener.TestHttpSessionListener</listener-class>
+	</listener>
+	
+	<listener>
+		<display-name>TestHttpSessionAttributeListener</display-name>
+		<listener-class>com.royal.listener.TestHttpSessionAttributeListener</listener-class>
+	</listener>
 	
 </web-app>
