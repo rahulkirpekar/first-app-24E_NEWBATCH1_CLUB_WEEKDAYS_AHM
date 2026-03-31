@@ -322,6 +322,16 @@
 		<url-pattern>/TwentyServlet</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>TwentyOneServlet</servlet-name>
+		<servlet-class>com.royal.controller.TwentyOneServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwentyOneServlet</servlet-name>
+		<url-pattern>/TwentyOneServlet</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>NineteenServlet</servlet-name>
 		<servlet-class>com.royal.controller.NineteenServlet</servlet-class>
@@ -329,6 +339,16 @@
 	<servlet-mapping>
 		<servlet-name>NineteenServlet</servlet-name>
 		<url-pattern>/NineteenServlet</url-pattern>
+	</servlet-mapping>
+		
+		
+	<servlet>
+		<servlet-name>TwentyTwoServlet</servlet-name>
+		<servlet-class>com.royal.controller.TwentyTwoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwentyTwoServlet</servlet-name>
+		<url-pattern>/TwentyTwoServlet</url-pattern>
 	</servlet-mapping>
 		
 	<listener>
@@ -350,5 +370,33 @@
 		<display-name>TestHttpSessionAttributeListener</display-name>
 		<listener-class>com.royal.listener.TestHttpSessionAttributeListener</listener-class>
 	</listener>
+	
+	<listener>
+		<display-name>TestServletContextListener</display-name>
+		<listener-class>com.royal.listener.TestServletContextListener</listener-class>
+	</listener>
+	
+	
+	<listener>
+		<display-name>TestServletContextAttributeListener</display-name>
+		<listener-class>com.royal.listener.TestServletContextAttributeListener</listener-class>
+	</listener>
+	
+	
+	
+	<filter>
+		<filter-name>TestFilter</filter-name>
+		<filter-class>com.royal.filter.TestFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>TestFilter</filter-name>
+		<url-pattern>/*</url-pattern>		
+	</filter-mapping>
+	
+	
+	
+	
+	
+	
 	
 </web-app>
