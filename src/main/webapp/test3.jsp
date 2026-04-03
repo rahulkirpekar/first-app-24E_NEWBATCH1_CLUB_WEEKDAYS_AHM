@@ -4,6 +4,9 @@
 <title>Declaration Tag</title>
 </head>
 <body>
+	
+	<%@ include file="header.jsp" %>
+
 	<%!
 		int getCube(int no)
 		{
@@ -12,6 +15,9 @@
 	%>
 
 	Cube Value :  <%=getCube(10)%>;
+
+
+	<%@ include file="footer.jsp" %>
 
 </body>
 </html>

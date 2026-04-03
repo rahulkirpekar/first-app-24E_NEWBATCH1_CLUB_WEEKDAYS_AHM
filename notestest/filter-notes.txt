@@ -1,0 +1,8 @@
+Filter:-
+-------
+
+		Pre-Filtering
+	request----filter---->servlet/jsp
+				|
+	(post-filtering)	|
+	resonse<----------------|
